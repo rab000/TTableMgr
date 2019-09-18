@@ -1,0 +1,49 @@
+﻿using System;
+using System.Collections;
+using System.Collections.Generic;
+
+
+namespace MergeTown
+{
+    
+    public partial class DataMgr
+    {
+        private const string exceltype = "excel";
+
+        private readonly Dictionary<string, Action<byte[]>> m_DataHandlers = new Dictionary<string, Action<byte[]>>();
+
+        public int Count
+        {
+            get { return m_DataHandlers.Count; }
+        }
+
+        private static DataMgr instance = new DataMgr();
+        public static DataMgr Instance { get { return instance; } }
+
+        public void Load(bool isDevelop, Action<string> callback)
+        {
+            //CoroutineRunner.StartCoroutine(LoadDatas(isDevelop, callback));
+        }
+
+        private IEnumerator LoadDatas(bool isDevelop, Action<string> callback)
+        {
+            yield return null;
+            //foreach (var pair in m_DataHandlers)
+            //{
+            //    yield return null;
+            //    string resPath = ResMgr.GetResFullName(pair.Key, exceltype, isDevelop);
+            //    if (!string.IsNullOrEmpty(resPath))
+            //    {
+            //        ResMgr.Instance.LoadAssetTextAsset(resPath, (textAsset) =>
+            //        {
+            //            if (textAsset != null)
+            //            {
+            //                pair.Value.Invoke(textAsset.bytes);
+            //                callback?.Invoke(textAsset.name);
+            //            }
+            //        });
+            //    }
+            //}
+        }
+    }
+}

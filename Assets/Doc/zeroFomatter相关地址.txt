@@ -1,0 +1,5 @@
+github 关于zfc.exe的使用方法
+https://github.com/neuecc/ZeroFormatter/blob/master/README.md
+
+zfc.exe下载地址
+https://github.com/neuecc/ZeroFormatter/releases

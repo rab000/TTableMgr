@@ -1,0 +1,27 @@
+关于zeroFomatter使用方法说明
+使用序列化，反序列化前需要注册
+具体注册方法，可以看res/ZeroFormatter.UnityTests.zip
+中ZeroFormatterGenerated.cs
+和ZeroFormatterGenerated.Additional.cs
+
+
+关于CSV2Csharp的一些说明
+1 从csv直接生成对应数据表类tableClass
+以及数据表类管理类tableMgr
+
+2 使用zfc.exe(就是ZeroFomatter编译出的exe)
+具体流程，把生成的tableClass都放到unity工程中，然后
+zfc.exe -i "myunity.csproj" -o "Assets\ZeroFormatterGenerated.cs"
+或者 zfc.exe -i "myunity.csproj" -o "Assets\ZeroFormatterGenerated.cs"
+生成ZeroFormatterGenerated.cs
+
+3
+根据类名生成ZeroFormatter需要的注册类(ZeroFormatterGenerated.Additional.cs)
+
+4
+最后生成数据表类实例，把csv中数据存到类中，再由ZeroFormatter把数据表类序列化成二进制，存起来
+
+
+注意:
+必须先生成TableClass，TableMgr，ZeroFormatterGenerated.cs，ZeroFormatterGenerated.Additional.cs
+然后才能生成binary
