@@ -25,3 +25,13 @@ zfc.exe -i "myunity.csproj" -o "Assets\ZeroFormatterGenerated.cs"
 注意:
 必须先生成TableClass，TableMgr，ZeroFormatterGenerated.cs，ZeroFormatterGenerated.Additional.cs
 然后才能生成binary
+
+
+使用方法说明
+先生成全部代码
+再配合Res->DataMgr中手写代码
+
+先DataMgr.LoadData载入配表资源
+然后引用时直接使用DataMgr.xxxxDic
+
+
